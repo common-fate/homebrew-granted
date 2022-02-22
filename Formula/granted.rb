@@ -5,13 +5,13 @@
 class Granted < Formula
   desc "The easiest way to access your cloud."
   homepage "https://granted.dev/"
-  version "0.0.11"
+  version "0.0.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/v0.0.11/granted_0.0.11_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "e6c2eb451e0ace5b86e93039cf3094e91968f8096f63da425476b255b61a0ad9"
+      url "http://releases.commonfate.io/granted/v0.0.12/granted_0.0.12_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "039baf82871e52510817644651f2e0ca018197e26f453f85b9a968680e3c9ca6"
 
       def install
         bin.install "granted"
@@ -23,9 +23,9 @@ class Granted < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/v0.0.11/granted_0.0.11_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "898f3da1995853aeabfad0f37b7f53e71221df394598b8c572faef424267d266"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "http://releases.commonfate.io/granted/v0.0.12/granted_0.0.12_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a49bc75d906324d63cdc473517d87e0c60adafe7ee3080f53e46d3ab7c0f4f46"
 
       def install
         bin.install "granted"
@@ -34,9 +34,9 @@ class Granted < Formula
         bin.install "assume.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/granted/v0.0.11/granted_0.0.11_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "974350fbad2215370664f18f1048fc1f3a0aa7362a45c06760d5115155d49291"
+    if Hardware::CPU.intel?
+      url "http://releases.commonfate.io/granted/v0.0.12/granted_0.0.12_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "6f2fe7dec4567cd3ade3ac00816abb05e56eecec2f92d9a129fe727c028dd16e"
 
       def install
         bin.install "granted"
