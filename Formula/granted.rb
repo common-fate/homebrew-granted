@@ -11,7 +11,7 @@ class Granted < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d72261347a8f16fb5fb2debd0729f01494fed64d794691c7e32ff16f5a0786c1"
+      sha256 "c48a14d723a6c2c679ed7f3c18c0a6cfcab456d2869324e9fded66e54c4f9378"
 
       def install
         bin.install "granted"
@@ -22,7 +22,7 @@ class Granted < Formula
     end
     if Hardware::CPU.intel?
       url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "aefc7f62f8a29ce45bf815755c9a08df39c17d0bc064d82775cf649d3564c49f"
+      sha256 "dc3246f0940c992c6a2c99e7983fdeba1dce2c6fd559de13c7c5b2b666a38d30"
 
       def install
         bin.install "granted"
@@ -34,9 +34,9 @@ class Granted < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c83c0850d8793759aa5ca23dfead11573e409ccc34824f2e2ff1a63ea7a60fc6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "31608ac2e946a4cd171fe8d4ec1774597fe45655b90832fa665930ece6d7088d"
 
       def install
         bin.install "granted"
@@ -45,9 +45,9 @@ class Granted < Formula
         bin.install "assume.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "9379535d45d9de6d38f96bbd9cd9e2a1bb301dc16c6f39b88b51ca738be6caf0"
+    if Hardware::CPU.intel?
+      url "http://releases.commonfate.io/granted/v0.2.0/granted_0.2.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "31e00d33e991197575c7cd6c52d7f3cd38e0b44da2dd066b8901125f558feb8f"
 
       def install
         bin.install "granted"
