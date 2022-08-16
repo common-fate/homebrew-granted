@@ -10,8 +10,8 @@ class Granted < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/granted/0.2.6/granted_0.2.6_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "621454f2d707c7584daf1f3825adbe67234fa0d1e2d6385e334502a905890755"
+      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "b823446011828b23dd2d01bfe7e2d7a7b5829bc0794df9f84a602c831cb7c0a3"
 
       def install
         bin.install "granted"
@@ -21,8 +21,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/0.2.6/granted_0.2.6_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d70fd2e29b1fee74df7fdbf05bf2b6a5ffb70c1031c369dc25c20d450b7419af"
+      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e9336273287c4ee4e278eeadad4b48765ba71b3535e5ed6d3643ab89c26c73f7"
 
       def install
         bin.install "granted"
@@ -35,8 +35,8 @@ class Granted < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/granted/0.2.6/granted_0.2.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "4fb9d2d291a79d4d75daf75f1d3c259c700544ed5d7bcb5874452969d1b3fa11"
+      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "204c08bbe375a2791ddaf109033c59496681f21e0ac8fae38e5587df4d211e31"
 
       def install
         bin.install "granted"
@@ -46,8 +46,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/0.2.6/granted_0.2.6_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f5482c9c965a60937f0454239206a69a6a14537aaae695e6dd33e8de782c664e"
+      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ee5809ed3680a572318d846b387977eab4fc7bc36cbf0187b7fc4430672881d9"
 
       def install
         bin.install "granted"
