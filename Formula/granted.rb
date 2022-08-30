@@ -5,13 +5,13 @@
 class Granted < Formula
   desc "The easiest way to access your cloud."
   homepage "https://granted.dev/"
-  version "0.2.6"
+  version "0.2.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "098744efb34b94acbd3674c65fd72b76aa3c601e4bfdede83c599b6f1b5e87fa"
+    if Hardware::CPU.intel?
+      url "http://releases.commonfate.io/granted/v0.2.8/granted_0.2.8_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a33771933c244ac2cde42cf20a319ac94d6795f497549a2929b32c994ee9023d"
 
       def install
         bin.install "granted"
@@ -20,9 +20,9 @@ class Granted < Formula
         bin.install "assume.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "dda62aa37a9eb160b4fae505e2086d58efe0a76bfe8e4aa301f84b7d055d35c7"
+    if Hardware::CPU.arm?
+      url "http://releases.commonfate.io/granted/v0.2.8/granted_0.2.8_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0f6f1b5267507cbd4cf1d04d0a73953c1597fa433135d222845f0813f678a0b7"
 
       def install
         bin.install "granted"
@@ -35,8 +35,8 @@ class Granted < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "fedb28a50932c496d520a2d95d9f2f0f25493c4390cd10b747bba9fa9f6e3443"
+      url "http://releases.commonfate.io/granted/v0.2.8/granted_0.2.8_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e5b8abe1ced6c37063580dee29f4ab7331f195ebe29e53a66e6f5f908b5b9a6d"
 
       def install
         bin.install "granted"
@@ -46,8 +46,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/granted/v0.2.6/granted_0.2.6_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "dd6d00616fc146127de8b5a72ab97b3bad344c62d079a78b512e089d20002db1"
+      url "http://releases.commonfate.io/granted/v0.2.8/granted_0.2.8_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0525e49e016328de9987a89a02c12d93203983c9987196717b33d1c316921ba0"
 
       def install
         bin.install "granted"
