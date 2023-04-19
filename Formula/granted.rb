@@ -5,28 +5,28 @@
 class Granted < Formula
   desc "The easiest way to access your cloud."
   homepage "https://granted.dev/"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://releases.commonfate.io/granted/v0.10.0/granted_0.10.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b2d333b547330cddce747d07538329cd8a57b6a6a0c66591896942f2d28e4822"
+      url "https://releases.commonfate.io/granted/v0.11.0/granted_0.11.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "35d380794b17f8ccaf7bb9a657cdcd6fd1106cea44f692dd6a78564c48763a85"
 
       def install
         bin.install "granted"
-        bin.install "assumego"
+        bin.install_symlink "granted" => "assumego"
         bin.install "assume"
         bin.install "assume.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.10.0/granted_0.10.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "cf65ac49d3d05b3f69d917c446d4f67b702df4824f998f41c7121ff2f640c4ed"
+      url "https://releases.commonfate.io/granted/v0.11.0/granted_0.11.0_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "dc726c1a52afff10543223c1307e2c0e7dd28da1c71d20facc1432c93ff21b86"
 
       def install
         bin.install "granted"
-        bin.install "assumego"
+        bin.install_symlink "granted" => "assumego"
         bin.install "assume"
         bin.install "assume.fish"
       end
@@ -35,23 +35,23 @@ class Granted < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.commonfate.io/granted/v0.10.0/granted_0.10.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "bd22c0609282b8270469bb9c2ad3e891b315857195ee73b96aade4ca2e2c8ce2"
+      url "https://releases.commonfate.io/granted/v0.11.0/granted_0.11.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a842af18c2e82cddfad97935c8c98ed4ab7d4679a1858f19047c5356796a6373"
 
       def install
         bin.install "granted"
-        bin.install "assumego"
+        bin.install_symlink "granted" => "assumego"
         bin.install "assume"
         bin.install "assume.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.10.0/granted_0.10.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "23b631d77f2823d99cf7317ef1ffef8e857cafff7a108b9db91b4f9d1b8a3315"
+      url "https://releases.commonfate.io/granted/v0.11.0/granted_0.11.0_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "7d05a3d0b035dfcaf338ab367cb90cccda214ee54cbbdef37c548e0735b413ab"
 
       def install
         bin.install "granted"
-        bin.install "assumego"
+        bin.install_symlink "granted" => "assumego"
         bin.install "assume"
         bin.install "assume.fish"
       end
