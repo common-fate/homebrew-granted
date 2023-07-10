@@ -5,21 +5,21 @@
 class Gdeploy < Formula
   desc "Manage your Granted Approvals deployment."
   homepage "https://granted.dev/"
-  version "0.15.5"
+  version "0.15.6"
   license "AGPL-3.0-only"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/gdeploy/v0.15.5/gdeploy_0.15.5_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "8f6fd55ffa6ce6cc99b5f1bc6715f6340d9c78171bc5c0906442bb9d53576b8b"
+    if Hardware::CPU.arm?
+      url "http://releases.commonfate.io/gdeploy/v0.15.6/gdeploy_0.15.6_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a6fca9e10bfc8d50794a8e9e6873c5377c4667b02980b5ab0fdadef6d8aaf861"
 
       def install
         bin.install "gdeploy"
       end
     end
-    if Hardware::CPU.arm?
-      url "http://releases.commonfate.io/gdeploy/v0.15.5/gdeploy_0.15.5_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "150408a1934bf8c2ce28902de516aaa189dd0ac4331e43f05c3a492d67bcf0ed"
+    if Hardware::CPU.intel?
+      url "http://releases.commonfate.io/gdeploy/v0.15.6/gdeploy_0.15.6_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "7b2620f118a07d48d13d977d0e278dbd49e1cf387abe93e67135ba8c153324b3"
 
       def install
         bin.install "gdeploy"
@@ -29,16 +29,16 @@ class Gdeploy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://releases.commonfate.io/gdeploy/v0.15.5/gdeploy_0.15.5_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2ba59c0cf160f0509ca16bd1b20354defba7e21d6c5cf5331f15da06c69ccc72"
+      url "http://releases.commonfate.io/gdeploy/v0.15.6/gdeploy_0.15.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "3e643e4d33e72f1ac350460f3ad19c7765b2e176ec4ba4d5c8420546a7e4427d"
 
       def install
         bin.install "gdeploy"
       end
     end
     if Hardware::CPU.intel?
-      url "http://releases.commonfate.io/gdeploy/v0.15.5/gdeploy_0.15.5_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f43a49b516dd65365161465762786b51b08c54cc9c943c637d8cba02e3c9d775"
+      url "http://releases.commonfate.io/gdeploy/v0.15.6/gdeploy_0.15.6_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "320b284ed7a6a30fda0062fed165d36e6741a081fd40cd31decb8c169d25cbf3"
 
       def install
         bin.install "gdeploy"
