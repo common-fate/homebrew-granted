@@ -11,7 +11,7 @@ class Granted < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "170fa3a73fe0054d00fe72198a9531df5a7d759d05dcca846312e98fc1afff43"
+      sha256 "ec46373049da4cf52bcf60e4f919880a897ca9e229a9ee9b0410425c6d9f4d00"
 
       def install
         bin.install "granted"
@@ -22,7 +22,7 @@ class Granted < Formula
     end
     if Hardware::CPU.intel?
       url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "921d2e2038b916a1f103cb4388709f2ca21d129dc0fb8bb83b957da1388afc3b"
+      sha256 "62634003a4cc69fc08cefa55cefc0c184b21be5ccb01884f6d65a543e8b8f1c6"
 
       def install
         bin.install "granted"
@@ -34,9 +34,9 @@ class Granted < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "639cc4491de4b5c3bf4d7ab08251d2004a5a87576a7fe6e0f89aa0b19e02436f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "640f061e6b62778a941e7d3d14e98a4e3d7eca7ac5374d48309abee844e53022"
 
       def install
         bin.install "granted"
@@ -45,9 +45,9 @@ class Granted < Formula
         bin.install "assume.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "0d50f5d3627e894e3f861df06052f081c365456e6be606097a284038ee7f4205"
+    if Hardware::CPU.intel?
+      url "https://releases.commonfate.io/granted/v0.14.2/granted_0.14.2_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "b4d835b210bea9cc698d16ee0d109b27b09e3c57d09ecf25ca7e711191efd61e"
 
       def install
         bin.install "granted"
