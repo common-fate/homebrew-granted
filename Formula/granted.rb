@@ -10,8 +10,8 @@ class Granted < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.24.0/granted_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d0acb65a8dbfb2e9018b4be2b99a4fc0a1a139f98e7b06ec838c5f67ae57f9a8"
+      url "https://releases.commonfate.io/granted/v0.24.0/granted_0.24.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ab5d3c7b637ae463dbf36db08f4e067a64e6f4fdd1f959032e728ec447a78c4b"
 
       def install
         bin.install "granted"
@@ -21,8 +21,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.commonfate.io/granted/v0.24.0/granted_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "88787386c16a9c4273df3bf4f31a1cd0d1b638286e6aedf1fa984a87c4ad653a"
+      url "https://releases.commonfate.io/granted/v0.24.0/granted_0.24.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2d62b6694597139d6730497db3c09101f43abf6f7ceea96fe1683b1986d85c4c"
 
       def install
         bin.install "granted"
@@ -35,8 +35,8 @@ class Granted < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.24.0/granted_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5a8f03c6c979d7d3412d081cb8981616f1e15918cd824786c4ce0aab940747a7"
+      url "https://releases.commonfate.io/granted/v0.24.0/granted_0.24.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7ae147699945ece1925b017f03442fbc282a10ed708d7c4809bffbb2502a3ecb"
 
       def install
         bin.install "granted"
@@ -46,8 +46,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.commonfate.io/granted/v0.24.0/granted_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0d1faabae236ff59649dac1be82f580b5a8aad3ebd04e9e7edcbcec5af62ab62"
+      url "https://releases.commonfate.io/granted/v0.24.0/granted_0.24.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "03631789dc2500a75b16fb5bde2faba731c1b61f6379e46f86be20b0e4fa7db0"
 
       def install
         bin.install "granted"
