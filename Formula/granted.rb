@@ -5,13 +5,13 @@
 class Granted < Formula
   desc "The easiest way to access your cloud."
   homepage "https://granted.dev/"
-  version "0.33.0"
+  version "0.34.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.33.0/granted_0.33.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "05affe1b478b0f8df1dea23ae18a8849dafc8d596b239e5c1c5776f0d7684673"
+      url "https://releases.commonfate.io/granted/v0.34.0/granted_0.34.0_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "748f5d81be775771be9b566191753cbf662d3d5c13911f46c74ed8f3f94451f6"
 
       def install
         bin.install "granted"
@@ -21,8 +21,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://releases.commonfate.io/granted/v0.33.0/granted_0.33.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "38b5c27608bacf2fe1776215b0139e52aeeeb7f2359407ce0bf77453796cfa38"
+      url "https://releases.commonfate.io/granted/v0.34.0/granted_0.34.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a7c8dd7632a5040a81d28c9ac0270aed0e86aefa8ab9c5ed86d9f75f4ef1744f"
 
       def install
         bin.install "granted"
@@ -35,8 +35,8 @@ class Granted < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://releases.commonfate.io/granted/v0.33.0/granted_0.33.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8361f41e986114fd6ae26f421573dfa78aea56a627565dded472460aeb2b5a71"
+      url "https://releases.commonfate.io/granted/v0.34.0/granted_0.34.0_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "abf96dd569e4f108e999e1ac700e7773b274deb453ff29f4fabb6a4d9b3d1477"
 
       def install
         bin.install "granted"
@@ -46,8 +46,8 @@ class Granted < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://releases.commonfate.io/granted/v0.33.0/granted_0.33.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d7d5a5254ef4394ad91214691894e24f082215d9389bd63da947ee54eb96283b"
+      url "https://releases.commonfate.io/granted/v0.34.0/granted_0.34.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "308f95cc6425b29287d9eb7fedf34a2514413c2483a5daa0a1e88db78ee7bf8b"
 
       def install
         bin.install "granted"
